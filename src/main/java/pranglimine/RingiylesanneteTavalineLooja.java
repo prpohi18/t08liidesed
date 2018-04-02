@@ -1,4 +1,4 @@
-/*
+
 package pranglimine;
 public class RingiylesanneteTavalineLooja implements RingiylesanneteLoojaLiides{
     @Override
@@ -10,4 +10,3 @@ public class RingiylesanneteTavalineLooja implements RingiylesanneteLoojaLiides{
         return new Ringiylesanne(a3, a2);
     }
 }
-*/

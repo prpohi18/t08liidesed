@@ -1,4 +1,3 @@
-/*
 package pranglimine;
 public class Ringiylesanne{
     double raadius;
@@ -19,4 +18,3 @@ public class Ringiylesanne{
         return raadius;
     }
 }
-*/

@@ -1,7 +1,7 @@
+package generaator;
 import java.io.File;
 import java.util.Scanner;
 import java.util.*;
-package generaator;
 
 public class FailistLugemine implements FailistLugemiseLiides{
   @Override

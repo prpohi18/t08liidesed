@@ -1,4 +1,4 @@
 package kolmnurk;
 public interface KolmnurgaYlesanneteLoojaLiides{
-	public KolmnurgaYlesanne looKolmnurgaYlesanne(int maxpindala);
+	public int KolmnurgaPindalaLeidmine(int kylg1, int korgus);
 }

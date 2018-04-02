@@ -39,4 +39,10 @@ public class Testid1{
         assertTrue(yksLeitud);
         assertTrue(viisLeitud);
     }
+    @Test
+    public void KolmnurgaPindala(){
+        KolmnurgaLiides looja=new KolmnurgaPindala();
+        float y1=looja.arvutaKolmnurgaPindala(1, 10);
+        assertTrue(y1>=0.5 && y1<=50);
+    }
 }

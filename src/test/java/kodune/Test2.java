@@ -6,7 +6,7 @@ public class Test2{
   public void ylesanneLoomine(){
     kolmaskylg yl=new kolmaskylg(3, 2, 45);
     assertEquals("3.0&2.0&45.0", yl.toString());
-    assertEquals(11.4, yl.checkSide3(), 0.1);
+    assertEquals(2.1, yl.checkSide3(), 0.1);
   }
 
 }

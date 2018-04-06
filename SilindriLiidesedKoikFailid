@@ -1,0 +1,95 @@
+//ESIMESE FAILI PEALKIRI - Silindriylesanne.java
+
+package arvutamine;
+public class Silindriylesanne{
+	int raadius;
+	int korgus;
+	double kyljepindala;
+	public Silindriylesanne(int arv1, int arv2){
+		raadius = arv1;
+		korgus = arv2;
+		kyljepindala = 2 * 3 * raadius * korgus;
+	}
+	
+	@Override
+	public String toString(){
+		return "Küljepindala on 2 * 3 * "+raadius+" * "+korgus+ " = ";
+	}
+	
+	public double kysiKyljepindala(){
+		return kyljepindala;
+	}
+	
+	public int kysiRaadius(){
+		return raadius;
+	}
+	
+	public int kysiKorgus(){
+		return korgus;
+	}
+}
+
+//TEISE FAILI PEALKIRI - SilindriylesanneteLoojaLiides.java
+
+package arvutamine;
+public interface SilindriylesanneteLoojaLiides{
+	public Silindriylesanne looSilindriylesanne(int maxsumma);
+}
+
+//KOLMANDA FAILI PEALKIRI - SilindrylesanneteTavalineLooja.java
+package arvutamine;
+
+import arvutamine.JuhuarvudeGeneraatoriLiides;
+import arvutamine.JuhuarvudeYhtlaneGeneraator;
+import arvutamine.SilindriylesanneteLoojaLiides;
+
+public class SilindriylesanneteTavalineLooja implements SilindriylesanneteLoojaLiides{
+	@Override
+	public Silindriylesanne looSilindriylesanne(int maxsumma){
+		JuhuarvudeGeneraatoriLiides generaator = new JuhuarvudeYhtlaneGeneraator();
+		int a1 = generaator.looJuhuarv(5, 10);
+		int a2 = generaator.looJuhuarv(0, 5);
+		int a3 = a1 - a2;
+		return new Silindriylesanne(a3, a2);
+	}
+}
+
+//TEST - Testid1.java
+package arvutamine;
+public class Testid1{
+	@Test
+    public void ylesandeLoomine(){
+        Silindriylesanne yl=new Silindriylesanne(3, 2);
+        assertEquals("2 * 3 * 3 * 2;", yl.toString());
+        assertEquals(36, yl.kysiKyljepindala());
+    }		
+
+	@Test
+	public void ylesandeLoomineLiidesest(){
+        SilindriylesanneteLoojaLiides looja=new SilindriylesanneteTavalineLooja();
+        Silindriylesanne yl=looja.looSilindriylesanne(100);
+        assertTrue(yl.kysiKyljepindala()<=100);
+        assertEquals(yl.kysiKyljepindala(),2 * 3 * yl.kysiRaadius()*yl.kysiKorgus());
+    }	
+
+    @Test
+    public void juhuarvuLoomine(){
+        JuhuarvudeGeneraatoriLiides generaator=new JuhuarvudeYhtlaneGeneraator();
+        boolean yksLeitud=false;
+        boolean viisLeitud=false;
+        for(int i=0; i<1000; i++){
+            int arv=generaator.looJuhuarv(1, 5);
+            assertTrue(arv>=1);
+            assertTrue(arv<=5);
+            if(arv==1){yksLeitud=true;}
+            if(arv==5){viisLeitud=true;}
+        }
+        assertTrue(yksLeitud);
+        assertTrue(viisLeitud);
+    }
+} 
+
+
+//VIGA
+
+//PUTTY JÄRGI COMPILATIONI PROBLEEM

@@ -17,12 +17,13 @@ import static org.junit.Assert.*;
  * @author erike
  */
 public class testIntCalc {
+    interestCalculator a = new interestCalculator();
     @Test
     public void testInterest(){
-        assertEquals(720.0, interestCalculator.interest(1200, 0.05, 12), 0);
+        assertEquals(720.0, a.interest(1200, 0.05, 12), 0);
     }
     @Test
     public void testInterestSum(){
-        assertEquals(1920.0, interestCalculator.interestSum(1200, 0.05, 12), 0);
+        assertEquals(1920.0, a.interestSum(1200, 0.05, 12), 0);
     }
 }

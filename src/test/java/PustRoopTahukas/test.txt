@@ -1,0 +1,15 @@
+Running PustRoopTahukas.Test1
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.864s
+[INFO] Finished at: Thu May 24 20:21:45 EEST 2018
+[INFO] Final Memory: 9M/243M
+[INFO] ------------------------------------------------------------------------
+[kaserola@greeny t08liidesed]$

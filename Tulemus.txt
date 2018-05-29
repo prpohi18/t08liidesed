@@ -1,0 +1,20 @@
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running kaheksas.Testid
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ liidesed ---
+[INFO] Building jar: /home/jakoliis/public_html/prpohi/kodutood/t08liidesed/target/liidesed-1.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.184s
+[INFO] Finished at: Wed May 30 00:51:41 EEST 2018
+[INFO] Final Memory: 18M/243M
